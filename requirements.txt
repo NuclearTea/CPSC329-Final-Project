@@ -1,0 +1,11 @@
+# requirements.txt
+
+# GUI - Tkinter is included in Python's standard library on most systems
+# No need to list unless you're using a platform where it's not bundled
+
+# For testing
+pytest==8.0.0
+
+# Optional (but helpful) tools for formatting and linting
+black==23.11.0
+flake8==6.1.0
