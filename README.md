@@ -1,5 +1,5 @@
 # Directory structure (not code)
-
+```
 project-root/
 │
 ├── src/
@@ -16,6 +16,7 @@ project-root/
 ├── README.md
 ├── requirements.txt
 └── setup_instructions.md
+```
 
 ## ▶️ How to Run
 
