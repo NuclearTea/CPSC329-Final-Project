@@ -1,17 +1,57 @@
 import tkinter as tk
-from logic.example_logic import example_function
+from gui.crypto_tool_list import crypto_tool_list
+from gui.styles import PROGRAM_FONT
 
 
 def create_main_window():
-    window = tk.Tk()
-    window.title("Tkinter App")
-    window.geometry("400x300")
+    root = tk.Tk()
+    root.title("Crypto Tools")
+    root.geometry("1600x900")
 
-    # add random label
-    label = tk.Label(window, text="Hello, Tkinter!")
-    label.pack(pady=20)
+    # Right content frame that will be updated
+    content_frame = tk.Frame(root, bg="white")
+    content_frame.pack(side="right", fill="both", expand=True)
 
-    # add label using function
-    label = tk.Label(window, text=example_function())
-    label.pack(pady=20)
-    return window
+    # === Define your 4 components as functions ===
+    # These can be defined in another file and then called in each of these function
+    def component_1(parent):
+        label = tk.Label(
+            parent,
+            text="This is OTP hex <-> binary",
+            font=(PROGRAM_FONT, 18),
+            bg="white",
+        )
+        label.pack(expand=True)
+
+    def component_2(parent):
+        label = tk.Label(
+            parent,
+            text="Welcome to Remove Duplicates",
+            font=(PROGRAM_FONT, 18),
+            bg="white",
+        )
+        label.pack(expand=True)
+
+    def component_3(parent):
+        tk.Label(
+            parent, text="Encryption/Decryption", font=(PROGRAM_FONT, 18), bg="white"
+        ).pack(expand=True)
+
+    def component_4(parent):
+        tk.Label(
+            parent, text="Caesar Cipher Translator", font=(PROGRAM_FONT, 18), bg="white"
+        ).pack(expand=True)
+
+    components = (component_1, component_2, component_3, component_4)
+
+    def on_item_click(index):
+        for widget in content_frame.winfo_children():
+            widget.destroy()
+        components[index](content_frame)
+
+    crypto_tool_list(root, on_item_click)
+
+    # Show the first component by default
+    on_item_click(0)
+
+    root.mainloop()
