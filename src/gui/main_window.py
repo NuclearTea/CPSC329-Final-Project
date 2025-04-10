@@ -1,6 +1,6 @@
 import tkinter as tk
-from gui.crypto_tool_list import crypto_tool_list
-from gui.styles import PROGRAM_FONT
+from src.gui.crypto_tool_list import crypto_tool_list
+from src.gui.styles import PROGRAM_FONT
 
 
 def create_main_window():
