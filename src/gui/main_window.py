@@ -1,7 +1,6 @@
 import tkinter as tk
-from gui.crypto_tool_list import crypto_tool_list
-from gui.styles import PROGRAM_FONT
-from src.logic.remove_duplicates_logic import remove_duplicates, duplicate_characters
+from src.gui.crypto_tool_list import crypto_tool_list
+from src.gui.styles import PROGRAM_FONT
 from src.gui.characters_tool import component_2
 
 
@@ -24,8 +23,6 @@ def create_main_window():
             bg="white",
         )
         label.pack(expand=True)
-
-
 
     def component_3(parent):
         tk.Label(
