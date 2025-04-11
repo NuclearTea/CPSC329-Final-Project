@@ -1,5 +1,5 @@
 import tkinter as tk
-from gui.styles import PROGRAM_FONT
+from src.gui.styles import PROGRAM_FONT
 
 
 def crypto_tool_list(root, on_item_click):

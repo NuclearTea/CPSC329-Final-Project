@@ -64,8 +64,7 @@ If you don’t see any output or it installs very quickly, that’s okay — thi
 ### Step 5: Run the App
 
 ```bash
-cd src
-python main.py
+python -m src.main
 ```
 
 You should see a window pop up saying **"Hello, Tkinter!"**
