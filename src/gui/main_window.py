@@ -1,6 +1,7 @@
 import tkinter as tk
-from gui.crypto_tool_list import crypto_tool_list
-from gui.styles import PROGRAM_FONT
+from src.gui.crypto_tool_list import crypto_tool_list
+from src.gui.styles import PROGRAM_FONT
+from src.gui.characters_tool import component_2
 
 
 def create_main_window():
@@ -18,15 +19,6 @@ def create_main_window():
         label = tk.Label(
             parent,
             text="This is OTP hex <-> binary",
-            font=(PROGRAM_FONT, 18),
-            bg="white",
-        )
-        label.pack(expand=True)
-
-    def component_2(parent):
-        label = tk.Label(
-            parent,
-            text="Welcome to Remove Duplicates",
             font=(PROGRAM_FONT, 18),
             bg="white",
         )

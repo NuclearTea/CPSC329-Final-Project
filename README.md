@@ -1,4 +1,5 @@
 # Directory structure (not code)
+
 ```
 project-root/
 │
@@ -21,8 +22,8 @@ project-root/
 ## ▶️ How to Run
 
 ```bash
-cd src
-python main.py
+# from project-root
+python -m src.main
 ```
 
 ## 🧪 How to Run Tests
