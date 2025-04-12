@@ -9,3 +9,4 @@ pytest==8.0.0
 # Optional (but helpful) tools for formatting and linting
 black==23.11.0
 flake8==6.1.0
+pycryptodome==3.22.0
