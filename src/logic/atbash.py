@@ -10,24 +10,3 @@ def atbash_cipher(text):
             result += char
 
     return result
-
-def main():
-    while True:
-        choice = input("Would you like to (e)ncrypt or (d)ecrypt? (or 'q' to quit): ").lower()
-
-        if choice == 'q':
-            print("Goodbye!")
-            break
-
-        if choice not in ['e', 'd']:
-            print("Please enter 'e' for encrypt, 'd' for decrypt, or 'q' to quit")
-            continue
-
-        text = input("Enter your text: ")
-        result = atbash_cipher(text)
-
-        action = "Encrypted" if choice == 'e' else "Decrypted"
-        print(f"{action} text: {result}\n")
-
-if __name__ == "__main__":
-    main()
