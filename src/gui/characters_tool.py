@@ -1,6 +1,6 @@
 import tkinter as tk
-from src.gui.styles import PROGRAM_FONT
-from src.logic.remove_duplicates_logic import remove_duplicates, duplicate_characters
+from gui.styles import PROGRAM_FONT
+from logic.remove_duplicates_logic import remove_duplicates, duplicate_characters
 
 
 def component_2(parent):
