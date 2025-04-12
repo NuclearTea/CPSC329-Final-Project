@@ -10,7 +10,7 @@ def component_4(parent):
     title = tk.Label(
         master=frame, 
         text='Caesar Cipher Translator',
-        font=('Ariel bold', 25),
+        font=(PROGRAM_FONT, 25),
         justify='center'
     )
     title.pack(anchor='n', pady=(0, 50))
@@ -18,14 +18,14 @@ def component_4(parent):
     input_label = tk.Label(
         master=frame, 
         text='Please enter the text you wish to encrypt/decrypt below:',
-        font=('Ariel', 14),
+        font=(PROGRAM_FONT, 14),
         justify='center'
     )
     input_label.pack(anchor='n', pady=(0, 10))
 
     input_entry = tk.Entry(
         master=frame,
-        font=('Ariel', 16),
+        font=(PROGRAM_FONT, 16),
         width=75,
         borderwidth=2,
     )
@@ -35,7 +35,7 @@ def component_4(parent):
     shift_label = tk.Label(
         master=frame, 
         text='Please enter number of characters you would like to shift.',
-        font=('Ariel', 14),
+        font=(PROGRAM_FONT, 14),
         justify='center'
     )
     shift_label.pack(pady=(0, 5))
@@ -43,7 +43,7 @@ def component_4(parent):
     shift_warning = tk.Label(
         master=frame, 
         text='INTEGERS ONLY. NO SHIFT WILL BE APPLIED OTHERWISE.',
-        font=('Ariel', 12),
+        font=(PROGRAM_FONT, 12),
         justify='center',
         fg='red'
     )
@@ -51,7 +51,7 @@ def component_4(parent):
 
     shift_entry = tk.Entry(
         master=frame,
-        font=('Ariel', 32),
+        font=(PROGRAM_FONT, 32),
         width=5,
         borderwidth=2,
     )
@@ -61,14 +61,14 @@ def component_4(parent):
 
     radio_label = tk.Label(
         text='Select an option to perform:',
-        font=('Ariel', 14)
+        font=(PROGRAM_FONT, 14)
     )
     radio_label.pack(pady=(0, 5))
 
     en = tk.Radiobutton(
         master=frame,
         text='Encrypt',
-        font=('Ariel', 16),
+        font=(PROGRAM_FONT, 16),
         variable=radio_code,
         value=0
     )
@@ -77,7 +77,7 @@ def component_4(parent):
     de = tk.Radiobutton(
         master=frame,
         text='Decrypt',
-        font=('Ariel', 16),
+        font=(PROGRAM_FONT, 16),
         variable=radio_code,
         value=1
     )
@@ -92,7 +92,7 @@ def component_4(parent):
     translate_button = tk.Button(
         master=frame,
         text='Translate!',
-        font=('Ariel', 25),
+        font=(PROGRAM_FONT, 25),
         borderwidth=2,
         command=cmds 
     )
@@ -101,7 +101,7 @@ def component_4(parent):
     output_label = tk.Label(
         master=frame, 
         text='The output will be displayed below:',
-        font=('Ariel', 14),
+        font=(PROGRAM_FONT, 14),
         justify='center',
     )
     output_label.pack(pady=(0, 5))
@@ -109,7 +109,7 @@ def component_4(parent):
     output = tk.Label(
         text='. . .',
         master=frame,
-        font=('Ariel', 16),
+        font=(PROGRAM_FONT, 16),
         borderwidth=2,
     )
     output.pack()
