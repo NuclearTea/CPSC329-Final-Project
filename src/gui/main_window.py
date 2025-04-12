@@ -3,6 +3,7 @@ from src.gui.crypto_tool_list import crypto_tool_list
 from src.gui.styles import PROGRAM_FONT
 from src.gui.characters_tool import component_2
 from src.gui.encryption_decryption_tool import component_3
+from src.gui.caesar_cipher_tool import component_4
 
 
 def create_main_window():
@@ -24,11 +25,6 @@ def create_main_window():
             bg="white",
         )
         label.pack(expand=True)
-
-    def component_4(parent):
-        tk.Label(
-            parent, text="Caesar Cipher Translator", font=(PROGRAM_FONT, 18), bg="white"
-        ).pack(expand=True)
 
     components = (component_1, component_2, component_3, component_4)
 
