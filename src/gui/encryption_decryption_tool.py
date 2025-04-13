@@ -15,7 +15,6 @@ from src.logic.letter_to_number import (
 def component_3(parent):
     key = get_random_bytes(32)
 
-    # Set up scrollable container
     container = tk.Frame(parent)
     canvas = tk.Canvas(container)
     scrollbar = ttk.Scrollbar(container, orient="vertical", command=canvas.yview)
@@ -33,11 +32,9 @@ def component_3(parent):
     scrollbar.pack(side="right", fill="y")
 
     def add_cipher_section(title_text, on_submit):
-        # Title
         title = tk.Label(scrollable_frame, text=title_text, font=(PROGRAM_FONT, 25))
         title.pack(anchor="n", pady=(20, 10))
 
-        # Input label
         input_label = tk.Label(
             scrollable_frame,
             text="Please enter the text you wish to encrypt/decrypt:",
@@ -45,13 +42,11 @@ def component_3(parent):
         )
         input_label.pack(anchor="n", pady=(0, 5))
 
-        # Input field
         input_entry = tk.Entry(
             scrollable_frame, font=(PROGRAM_FONT, 16), width=75, borderwidth=2
         )
         input_entry.pack(pady=(0, 20))
 
-        # Encrypt/decrypt selection
         radio_code = tk.IntVar()
         radio_label = tk.Label(
             scrollable_frame,
@@ -75,7 +70,6 @@ def component_3(parent):
             value=1,
         ).pack(pady=(0, 10))
 
-        # Output label
         output_label = tk.Label(
             scrollable_frame,
             text="The output will be displayed below:",
@@ -83,7 +77,6 @@ def component_3(parent):
         )
         output_label.pack(pady=(0, 5))
 
-        # Output box (selectable)
         output = tk.Text(
             scrollable_frame, height=4, font=(PROGRAM_FONT, 16), wrap="word"
         )
@@ -91,7 +84,6 @@ def component_3(parent):
         output.config(state="disabled")
         output.pack(fill="x", padx=10)
 
-        # Button action
         def on_click():
             text = input_entry.get()
             encrypt_mode = radio_code.get()
@@ -102,7 +94,6 @@ def component_3(parent):
             output.insert("1.0", result)
             output.config(state="disabled")
 
-        # Submit button
         translate_button = tk.Button(
             scrollable_frame,
             text="Translate!",
@@ -111,17 +102,14 @@ def component_3(parent):
         )
         translate_button.pack(pady=(10, 30))
 
-    # AES Section
     aes_title = f"AES (Your key is {base64.b64encode(key).decode('utf-8')})"
     add_cipher_section(
         aes_title,
         lambda text, mode: encrypt(text, key) if mode == 0 else decrypt(text, key),
     )
 
-    # Atbash Section
     add_cipher_section("Atbash", lambda text, mode: atbash_cipher(text))
 
-    # Letter to Number Section
     add_cipher_section(
         "Letter to Number",
         lambda text, mode: letter_to_number_encrypt(text)
