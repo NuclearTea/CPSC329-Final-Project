@@ -1,5 +1,18 @@
 import string
 
+"""This tool encodes/decodes text using the Caesar Cipher.
+        
+        The Caesar Cipher works by shifting every letter in a message down the 
+        alphabet a certain number of times.
+
+        This is one of the oldest encryption schemes, said to have been 
+        utilized by and named after Julius Caesar!
+
+        This cipher is not secure enough to be seriously implemented today
+        however, it holds great merit in introducing basic cryptography in education
+        due to its simplicity and effectiveness in demonstrating encryption/decryption. """
+        
+
 def caesar_cipher(msg: string, shift: int, en_de: int) -> string:
     """Apply and return the encoded/decoded message"""
 
