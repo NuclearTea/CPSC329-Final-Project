@@ -142,6 +142,6 @@ def component_4(parent):
         due to its simplicity and effectiveness in demonstrating encryption/decryption.
         """
     )
-    explanation.pack(pady=(10, 30))
+    explanation.pack()
 
     return container
