@@ -1,6 +1,6 @@
 # 🔐 OTP Component Design References
 
-This document outlines key implementation decisions made in the `component_otp` Tkinter GUI and includes official documentation or reference links to support each choice.
+This document outlines key implementation decisions made in the Tkinter GUI and includes official documentation or reference links to support each choice.
 
 ---
 
